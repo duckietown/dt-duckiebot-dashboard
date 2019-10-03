@@ -51,5 +51,8 @@ RUN python3 $COMPOSE_DIR/configure.py \
   --login_enabled 1 \
   --cache_enabled 1
 
+# copy avahi services
+COPY assets/avahi-services/dt.dashboad.service /dt.dashboad.service
+
 # maintainer
 LABEL maintainer="Andrea F. Daniele (afdaniele@ttic.edu)"
