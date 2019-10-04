@@ -16,7 +16,7 @@ python3 $COMPOSE_DIR/configure.py \
   --logo_black "http://${HOSTNAME}.local/data/duckietown/images/logo.png"
 
 # enable service
-cp /dt.dashboad.service /etc/avahi-services/dt.dashboad.service
+cp /dt.dashboard.service /etc/avahi-services/dt.dashboard.service
 
 # ----------------------------------------------------------------------------
 # YOUR CODE ABOVE THIS LINE
