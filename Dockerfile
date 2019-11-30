@@ -4,7 +4,7 @@ ARG DASHBOARD_NAME="duckiebot"
 # ==================================================>
 # ==> Do not change this code
 ARG ARCH=arm32v7
-ARG MAJOR=latest
+ARG MAJOR=v0.9.7
 ARG BASE_IMAGE=compose
 ARG BASE_TAG=${MAJOR}-${ARCH}
 
