@@ -5,7 +5,8 @@ ARG MAINTAINER="Andrea F. Daniele (afdaniele@ttic.edu)"
 # ==================================================>
 # ==> Do not change this code
 ARG ARCH=arm32v7
-ARG COMPOSE_VERSION=v0.9.9
+#TODO: change this once v1.0.0 is released
+ARG COMPOSE_VERSION=devel
 ARG BASE_IMAGE=compose
 ARG BASE_TAG=${COMPOSE_VERSION}-${ARCH}
 
@@ -74,8 +75,14 @@ LABEL org.duckietown.label.maintainer="${MAINTAINER}"
 # <== Do not change this code
 # <==================================================
 
+# switch to simple user
+USER www-data
+
 # configure \compose\
 RUN python3 $COMPOSE_DIR/configure.py \
-  --guest_default_page "mission-control" \
+  --guest_default_page "robot" \
   --login_enabled 1 \
   --cache_enabled 1
+
+# switch back to root
+USER root
